@@ -4,64 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalog-List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
-    body {
-  font-family: "Helvetica Neue", sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+body { 
   line-height: 1.6;
-  margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
 }
 
-.header-container {
-  background-color: #fff461;
-  color: #000000;
-  padding: 0rem;
+.header {
+  overflow: hidden;
+  background-color: #dedddd;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
   text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav a {
-  color: #ff0000;
+  padding: 12px;
   text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
 }
 
-.section-container {
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+.header-right a:hover { 
+    background-color: dodgerblue;
+  }
+
+ .section-container{
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-}
+ } 
 
 section h2 {
   border-bottom: 2px solid #333;
-  margin-bottom: 1rem;
-}
-
-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-section li {
   margin-bottom: 1rem;
 }
 
@@ -76,72 +79,74 @@ border: 1px solid black;
  th {
     background-color: rgb(116, 229, 249);
   }
-   
+
 tr  {
   background-color: pink;
 }
 
-/*.column {
+.column {
   width: 100%;
-}*/
+}
 
 @media (min-width: 600px) {
+  .column { width: 50%; }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
   .column {
-    width: 50%;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
-  </style>
-  
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <h1>CATALOG</h1>
-      <nav>
-        <ul>
-          <li><a href="#printing">Printing</a></li>
-          &nbsp;&nbsp;&nbsp;
-          <li><a href="#online">Online services</a></li>
-          &nbsp;&nbsp;&nbsp;
-          <li><a href="#discount">Discount</a></li>
-          &nbsp;&nbsp;&nbsp;
-          <li><a href="#refer">Referal</a></li> 
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="whatsapp://send?text=Hello! catalog &phone=+916204948614">Order Now</a>
-         <!-- <li><a href="#feedback">Feedback</a></li>-->
-        </ul>
-      </nav>
-    </div>
-  </header>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #f1f1f1;
+}
 
-  <marquee width="100%" direction="left" height="100px">
-    Click on "Order Now" button to place your order
+
+.checked {
+  color: orange;
+}
+ </style>
+</head>
+  
+<body>
+  <div class="header">
+   <a href="#default" class="logo">CATALOG</a>
+    <div class="header-right">
+     <a href="#printing">Printing</a>
+     <a href="#online">Online services</a>
+     <a href="#discount">Discount</a>
+     <a href="#refer">Referal</a>
+     <a href="#feedback">Feedback</a>
+     <a class="active" href="whatsapp://send?text=Hello! catalog &phone=+916204948614">Order Now</a>
+    </div>
+  </div>
+
+  <marquee width="100%" direction="left" height="25px">
+    Click on "Order Now" to place your order
     </marquee>
 
     <section id="printing">
@@ -385,10 +390,15 @@ tr  {
           <td>Voter card download</td>
           <td>50</td>
         </tr>
+        <tr>
+          <td>45</td>
+          <td>Form fill</td>
+          <td>100</td>
+        </tr>
       </table>
     </div>
   </section>
-  
+  <br>
   <section id="discount">
     <div class="section-container">
       <h2>Discount</h2>
@@ -426,26 +436,22 @@ tr  {
       <h2>Referal</h2>
       <table style="width: 100%">
         <tr>
-          <td>If any person refer another person to place order from us, then he will be getting 5% of total order value
-            Minimum order value is RS 100.
+          <td>Any person refer another person to place order from us, then he will be getting 5% of total order value
+            Minimum order value is RS 100.<br> <br>
+            Top 10 Referrer:
             </td>
         </tr>
         </table>
     </div>
   </section>
 
-  <!--<section id="feedback">
+  <section id="feedback">
     <div class="section-container">
-      <h2>Feedback</h2>
-      <table style="width: 100%">
-        <tr>
-          <td>If any person refer another person to place order from us, then he will be getting 5% of total order value
-            Minimum order value is RS 101.
-            </td>
-        </tr>
-        </table>
-    </div>
-  </section>-->
+      <h2>Feedback</h2>      
+      <p>Give your opinion, what need's to improve to fulfill your requirement</p> 
+      <a href="https://forms.gle/zL3AW7iVEdUpgu6n8">Click here</a> to submit your feedback
 
+    </div>
+  </section>
 </body>
 </html>
