@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--> <!--RATING DESIGN ONLY-->
     <title>CATALOG</title>
     <style>
         * {
@@ -103,26 +103,26 @@ th {
   .column { width: 50%; }
 }
 
-
+/*FEEDBACK*/
 * {
   box-sizing: border-box;
 }
 
-.column {  
+.column {            /* Float four columns side by side */
   float: left;
   width: 25%;
   padding: 0 10px;
 }
 
-.row {margin: 0 -5px;} 
+.row {margin: 0 -5px;}  /* Remove extra left and right margins, due to padding */
 
-.row:after {
+.row:after {          /* Clear floats after the columns */
   content: "";
   display: table;
   clear: both;
 }
 
-@media screen and (max-width: 600px) {      
+@media screen and (max-width: 600px) {       /* Responsive columns */
   .column {
     width: 100%;
     display: block;
@@ -130,14 +130,14 @@ th {
   }
 }
 
-.card {     
+.card {         /* Style the counter cards */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
-
+  /*text-align: center;*/
   background-color: #f1f1f1;
 }
 
-
+/*RATING*/
 .checked {
   color: orange;
 }
@@ -163,27 +163,27 @@ th {
 }
 
 
-
-
-
-
+/*body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}*/
 
 
 
 
 .container {
     display: flex;
-    height: auto;
+    height: auto; /* 100% of the viewport height. It is default written 100vh*/
 }
 
 .left-panel, .middle-panel, .right-panel {
-
-    height: 100%; 
-    border: 2px solid #ccc; 
+    /*flex: content; /* Equal width for all panels */
+    height: 100%; /* Each panel takes up full height */
+    border: 2px solid #ccc; /* Just for demonstration */
     box-sizing: border-box;
 }
 
-
+/* You can style each panel separately */
 .left-panel {
     flex: 1;
     background-color: #ff94ea;
@@ -199,14 +199,14 @@ th {
     background-color: #ff94ea;
 }
 
-
+/* Media query for smaller screens */
 @media (max-width: 769px) {
     .left-panel, .right-panel {
-        display: none; 
+        display: none; /* Hide left and right panels */
     }
     
     .middle-panel {
-        flex: 1; 
+        flex: 1; /* Take up full width */
     }
 }
     
@@ -220,7 +220,7 @@ th {
   background-color: #ff94ea;
 }
 
-
+/*BANNER*/
 .banner{
   width: 100%px;
   height: auto;
@@ -228,6 +228,26 @@ th {
   border: 1px solid blue;
 }
 
+/*DISCOUNT BANNER*/
+/* Style the discount banner */
+.discount-banner {
+    background-color: #ff5733; /* Background color for the banner */
+    color: #fff; /* Text color for the banner */
+    text-align: center;
+    padding: 10px; /*Some padding for better readability */
+}
+
+/* Style the discount text */
+.discount-text {
+    font-size: 24px; /* Font size for the discount text */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style the discount description */
+.discount-description {
+    font-size: 18px; /* Font size for the description */
+    margin-top: 5px; /* Spacing between the text elements */
+}
 </style>
 </head>
 <body>
@@ -252,48 +272,48 @@ th {
 
 <div class="banner">
   <div class="banner-text">
+       <div class="discount-banner">
+          <span class="discount-text">SALE!</span>
+          <p class="discount-description">Get 20% discount on purchase above Rs 5000</p>
+        </div>
     <h1><center><u>These RS1 offer will be end soon. Order now to avail these offer.</u></center></h1>
     <h4>
       <ul>
-        <li>Black and White print (A4 sheets)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Black and White Xerox (A4 sheets)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Colour print (A4 sheets)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Colour Xerox (A4 sheets)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Black and White print (2pages in one side)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>colour print (2pages in one side)= (>1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Black and White print (3-4pages in one side)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Colour print (3-4 pages in one side)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Black and white print (5 & above pages in one side)= (1/-per side) - (1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Colour print (5 & above pages in one side)= (1/-per side) - (/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Glossy black and white print= 1 <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Glossy colour print= 1 <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Black and white sticker print= (1/- per half A4) - (1/- per full A4) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Colour sticker print= (1/- per half A4) - (/- per A4) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
-        <li>Passport size photo print= 1/- per 1 piece <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Black and White print (A4 sheets)= (<!--1.5-->1/-per side) - (<!--2-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Black and White Xerox (A4 sheets)= (<!--1.5-->1/-per side) - (<!--2-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Colour print (A4 sheets)= (<!--5-->1/-per side) - (<!--8-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Colour Xerox (A4 sheets)= (<!--4-->/-per side) - (<!--7-->/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Black and White print (2pages in one side)= (<!--4-->1/-per side) - (<!--7-->/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>colour print (2pages in one side)= (<!--7-->1/-per side) - (<!--9-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Black and White print (3-4pages in one side)= (<!--5-->1/-per side) - (<!--8-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Colour print (3-4 pages in one side)= (<!--8-->1/-per side) - (<!--10-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Black and white print (5 & above pages in one side)= (<!--10-->1/-per side) - (<!--15-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Colour print (5 & above pages in one side)= (<!--10-->1/-per side) - (<!--15-->1/-both side) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Glossy black and white print= <!--10-->1 <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Glossy colour print= <!--15-->1 <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Black and white sticker print= (<!--10-->1/- per half A4) - (<!--20-->1/- per full A4) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Colour sticker print= (<!--20-->1/- per half A4) - (<!--30-->/- per A4) <strong>* ONLY 10 ORDER LEFT *</strong> </li>
+        <li>Passport size photo print= <!--20-->1/- per <!--5-->1 piece <strong>* ONLY 10 ORDER LEFT *</strong> </li>
       </ul>
     </h4>
   </div>
 </div>
 
-
-
-
-
     <div class="container">
-        <div class="left-panel">
+        <div class="left-panel">  <!--LEFT PANEL-->
           <div class="adheader">
             <center><h3><strong><em>ADVERTISEMENT</em></strong></h3></center>
           </div>
           <a href="whatsapp://send?text=Hello! catalog, i want to advertise my services &phone=+916204948614">click here</a> for advertising your services.
           <br>
-          <img src="https://th.bing.com/th/id/OIP.HIoFmBG9NYlExwJ645j_IgHaEK?w=307&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+          <img src="Pickup.jpg" width="376px">
            <br>
           
-
+            <!-- Content for the left panel -->
        </div>
 
 
-        <div class="middle-panel"> 
+        <div class="middle-panel">   <!--MIDDLE PANEL-->
             <section id="printing">
                 <div class="section-container">
                     <h2>Printing</h2>
@@ -306,78 +326,83 @@ th {
                             <tr> 
                                 <td>1</td>
                                 <td>Black and White print (A4 sheets)</td>
-                                <td>(1/-per side) - (1/-both side)</td>
+                                <td>(<!--1.5-->1/-per side) - (<!--2-->1/-both side)</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Black and White Xerox (A4 sheets)</td>
-                                <td>(1/-per side) - (1/-both side)</td>
+                                <td>(<!--1.5-->1/-per side) - (<!--2-->1/-both side)</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Colour print (A4 sheets)</td>
-                                <td>(1/-per side) - (1/-both side)</td>
+                                <td>(<!--5-->1/-per side) - (<!--8-->1/-both side)</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Colour Xerox (A4 sheets)</td>
-                                <td>(1/-per side) - (1/-both side)</td>
+                                <td>(<!--4-->/-per side) - (<!--7-->/-both side)</td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>Black and White print (2pages in one side)</td>
-                                <td>(1/-per side) - (1/-both side)</td>
+                                <td>(<!--4-->1/-per side) - (<!--7-->/-both side)</td>
                             </tr>
                               <tr>
                         <td>6</td>
                         <td>colour print (2pages in one side)</td>
-                        <td>(1/-per side) - (1/-both side)</td>
+                        <td>(<!--7-->1/-per side) - (<!--9-->1/-both side)</td>
                       </tr>
                       <tr>
                         <td>7</td>
                         <td>Black and White print (3-4pages in one side)</td>
-                        <td>(1/-per side) - (1/-both side)</td>
+                        <td>(<!--5-->1/-per side) - (<!--8-->1/-both side)</td>
                       </tr>
                       <tr>
                         <td>8</td>
                         <td>Colour print (3-4 pages in one side)</td>
-                        <td>(1/-per side) - (1/-both side)</td>
+                        <td>(<!--8-->1/-per side) - (<!--10-->1/-both side)</td>
                       </tr>
                       <tr>
                         <td>9</td>
                         <td>Black and white print (5 & above pages in one side)</td>
-                        <td>(1/-per side) - (1/-both side)</td>
+                        <td>(<!--10-->1/-per side) - (<!--15-->1/-both side)</td>
                       </tr>
                       <tr>
                         <td>10</td>
                         <td>Colour print (5 & above pages in one side)</td>
-                        <td>(1/-per side) - (1/-both side)</td>
+                        <td>(<!--10-->1/-per side) - (<!--15-->1/-both side)</td>
                       </tr>
                       <tr>
                         <td>11</td>
                         <td>Glossy black and white print</td>
-                        <td>1</td>
+                        <td><!--10-->1</td>
                       </tr>
                       <tr>
                         <td>12</td>
                         <td>Glossy colour print</td>
-                        <td>1</td>
+                        <td><!--15-->1</td>
                       </tr>
                       <tr>
                         <td>13</td>
                         <td>Black and white sticker print</td>
-                        <td>(1/- per half A4) - (1/- per full A4)</td>
+                        <td>(<!--10-->1/- per half A4) - (<!--20-->1/- per full A4)</td>
                       </tr>
                       <tr>
                         <td>14</td>
                         <td>Colour sticker print</td>
-                        <td>(1/- per half A4) - (1/- per A4)</td>
+                        <td>(<!--20-->1/- per half A4) - (<!--30-->/- per A4)</td>
                       </tr>
                       <tr>
                         <td>15</td>
                         <td>Passport size photo print</td>
-                        <td>1/- per 1 piece</td>
+                        <td><!--20-->1/- per <!--5-->1 piece</td>
                       </tr>
+                      <!--<tr>
+                        <td>16</td>
+                        <td>Pvc card print</td>
+                        <td>1/- per 1 piece</td>
+                      </tr>-->
                     </table>
                 </div>
               </section>
@@ -591,24 +616,89 @@ th {
                     </table>
                 </div>
               </section>
-
+              <!--Feedback-->
   <section id="feedback">
     <div class="section-container">
       <h2>Feedback</h2>      
       <p>Give your opinion,</p> 
       <a href="https://forms.gle/zL3AW7iVEdUpgu6n8">Click here</a> to submit your feedback
+      <!--<div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>John Doe</b></h4> 
+              <p>Architect & Engineer</p> 
+              <p>Niladri vihar, Bhubaneswar, State</p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>John Doe</b></h4> 
+              <p>Architect & Engineer</p> 
+              <p>Niladri vihar, Bhubaneswar, State</p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>John Doe</b></h4> 
+              <p>Architect & Engineer</p> 
+              <p>Niladri vihar, Bhubaneswar, State</p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>John Doe</b></h4> 
+              <p>Architect & Engineer</p> 
+              <p>Niladri vihar, Bhubaneswar, State</p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </div>
+      </div>-->
     </div>
   </section>
 </div>
 
-<div class="right-panel">
+<div class="right-panel">      <!--RIGHT PANEL-->
  <div class="adheader">
     <center><h3><strong><em>ADVERTISEMENT</em></strong></h3></center>
   </div>
   <a href="whatsapp://send?text=Hello! catalog, i want to advertise my services &phone=+916204948614">click here</a> for advertising your services.
   <br>
   <img src="https://th.bing.com/th/id/OIP.xchQChN8H6zRuS13e1hadgHaHa?w=208&h=208&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="368px">
-
+            <!-- Content for the right panel -->
 </div>
 
     </div>
