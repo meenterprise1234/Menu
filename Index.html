@@ -266,6 +266,32 @@
       border-radius: 0px;
       color: rgba(41, 180, 76, 0.97);
     }
+
+
+    .back-to-top-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.back-to-top-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #ffffff; /* Set background color if necessary */
+    border: 1px solid #ffffff; /* Add border if desired */
+    border-radius: 50%; /* Make it a circle */
+    text-align: center;
+    line-height: 60px;
+    /*color: #333; /* Text color */
+    text-decoration: none;
+}
+
+.back-to-top-button img {
+    width: 60px;
+    height: 50px;
+}
   </style>
 </head>
 
@@ -631,6 +657,12 @@
             <td><center>Patia, Bhubaneswar, Odisha</center></td>
             <td><center>RS 55</center></td>
           </tr>
+          <tr>
+            <td><center>2</center></td>
+            <td><center>Asish Kumar patra </center></td>
+            <td><center>Niladri vihar , Bhubaneswar, Odisha</center></td>
+            <td><center>RS 7</center></td>
+          </tr>
         </table>
         <a href="https://drive.google.com/file/d/1HHvphCEjiiSWWhesV_N99KR14hIFmr75/view?usp=sharing">See more...</a>                                        
       </div>
@@ -673,23 +705,25 @@
                   </div>
                 </div>
 
-                <!--<div class="column">
+                <div class="column">
                   <div class="card">
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+                    <img src="Asish.png" alt="Avatar" style="width:100%">
                     <div class="container">
-                      <h4><b>John Doe</b></h4> 
-                      <p>Architect & Engineer</p> 
-                      <p>Niladri vihar, Bhubaneswar, State</p>
+                      <p></p>
+                      <br><br><br><br><br><br><br>
+                      <h4><b>Asish Kumar patra</b></h4> 
+                      <h5>Niladri vihar, Bhubaneswar, Odisha</h5> 
+                      <p>Low price</p>
                       <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star unchecked"></span>
-                      <span class="fa fa-star unchecked"></span>
-                      <span class="fa fa-star unchecked"></span>
-                      <span class="fa fa-star unchecked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
                     </div>
                   </div>
                 </div>
 
-                <div class="column">
+                <!--<div class="column">
                   <div class="card">
                   <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
                     <div class="container">
@@ -729,6 +763,12 @@
         </div>
       </div>
     </section>
+
+    <div class="back-to-top-container">
+      <a href="#top" class="back-to-top-button">
+          <img src="Arrow.png" alt="Back to Top">
+      </a>
+  </div>
 
   </div>
 </body>
